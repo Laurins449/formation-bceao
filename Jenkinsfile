@@ -4,17 +4,7 @@ pipeline {
    
 
     stages {
-        stage('Connection du github') {
-            steps {
-                git (
-                    url : 'https://github.com/Laurins449/formation-bceao.git',
-                    branch :  'main'
-                )
-            }
-
-           
-        }
-        
+               
         stage('build artefact') {
             steps {
                sh 'mvn clean package -DskipTests '
